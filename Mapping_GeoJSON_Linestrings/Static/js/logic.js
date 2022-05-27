@@ -27,14 +27,16 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
  
     // Then we add our 'graymap' tile layer to the map.
-    streets.addTo(map);
+    //streets.addTo(map);
 //let airportData = "https://raw.githubusercontent.com/Lalita-ponnapalli/Mapping_Earthquakes/Mapping_GeoJSON_Points/majorAirports.json"
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoRoutes.json";
+//let torontoData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoRoutes.json";
+let torontoData="https://raw.githubusercontent.com/Lalita-ponnapalli/Mapping_Earthquakes/Mapping_GeoJSON_Linestrings/Mapping_GeoJSON_Linestrings/Static/js/logic.js"
 // Grabbing our GeoJSON data.
-d3.json(airportData).then(function(data) {
-     console.log(data);
-// Creating a GeoJSON layer with the retrieved data.
+// Grabbing our GeoJSON data.
+d3.json(torontoData).then(function(data) {
+    console.log(data);
+  // Creating a GeoJSON layer with the retrieved data.
 L.geoJSON(data).addTo(map);
 });
    
